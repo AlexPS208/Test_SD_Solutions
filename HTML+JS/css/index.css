@@ -1,0 +1,90 @@
+* {
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BACKGROUND SETTING */
+
+body {
+    background-color: #5c87b2;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+/* CONTENT "WINDOW" */
+
+main {
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    min-width: 750px;
+    max-width: 1250px;
+    min-height: 600px;
+    max-height: 1000px;
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 60px 50px;
+}
+
+h1 {
+    font-size: 24pt;
+    margin-bottom: 20px;
+}
+
+/* CONTENT AREA */
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+/* TEXT AREA */
+
+.overviwe {
+    display: flex;
+    flex-direction: column;
+}
+
+span.item_title {
+    font-size: 12pt;
+    color: #8f8a8a;
+    margin-top: 30px;
+}
+
+/* For hide scrollbar in select element */
+.wrapper {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    border: solid grey 1px;
+}
+
+.wrapper>select {
+    width: 500px;
+    padding: 10px;
+    margin: -5px -20px -5px -5px;
+}
+
+/* BUTTON AREA */
+
+.control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.control>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.control>div>* {
+    margin: 10px;
+}

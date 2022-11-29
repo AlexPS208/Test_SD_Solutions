@@ -63,7 +63,7 @@ h1 {
     display: inline-block;
     vertical-align: top;
     overflow: hidden;
-    border: solid grey 1px;
+    border: solid #808080 1px;
 }
 
 .hide_scrollbar>select {
@@ -86,6 +86,6 @@ h1 {
     flex-direction: column;
 }
 
-.control>div>* {
-    margin: 10px;
+.control>div>input {
+    margin: 10px 0;
 }

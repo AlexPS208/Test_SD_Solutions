@@ -21,10 +21,10 @@
 
                 <span class="item_title">Name/Value Pair List</span>
                 <div class="wrapper">
-                    <select name="" id="" multiple="multiple" size="15">
-                        <option value="">1=1</option>
-                        <option value="">1=1</option>
-                        <option value="">1=1</option>
+                    <select name="text_area" id="text_area" multiple="multiple" size="15">
+                        <option value="">1=4</option>
+                        <option value="">2=4</option>
+                        <option value="">3=4</option>
                     </select>
                 </div>
             </div>
@@ -33,21 +33,23 @@
                 <div class="control_group">
                     <span class="item_title">Control group</span>
 
-                    <input type="button" value="Add">
-                    <input type="button" value="Delete">
+                    <input type="button" value="Add" id="add_but">
+                    <input type="button" value="Delete" id="del_but">
                 </div>
 
                 <div class="sort_group">
                     <span class="item_title">Sort group</span>
 
-                    <input type="button" value="Sort by Name">
-                    <input type="button" value="Sort by Value">
+                    <input type="button" value="Sort by Name" id="sort_by_name_but">
+                    <input type="button" value="Sort by Value" id="sort_by_value_but">
                 </div>
-                <input type="button" value="Show XML">
+                <input type="button" value="Show XML" id="show_xml_but">
             </div>
         </div>
     </main>
     <footer></footer>
 </body>
+
+<script type="module" src="js/index.js"></script>
 
 </html>

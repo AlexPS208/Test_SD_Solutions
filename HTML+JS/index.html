@@ -10,40 +10,43 @@
 </head>
 
 <body>
-    <head></head>
-    <main>
-        <h1>Test</h1>
-        <div class="content">
-            <div class="overviwe">
-                <span class="item_title">Name/Value Pair</span>
-                <input type="text" name="input" id="input">
+    <div class="wrapper">
 
-                <span class="item_title">Name/Value Pair List</span>
-                <div class="wrapper">
-                    <select name="text_area" id="text_area" multiple="multiple" size="15">
-                    </select>
+        <head></head>
+        <main>
+            <h1>Test</h1>
+            <div class="content">
+                <div class="overviwe">
+                    <span class="item_title">Name/Value Pair</span>
+                    <input type="text" name="input" id="input">
+
+                    <span class="item_title">Name/Value Pair List</span>
+                    <div class="hide_scrollbar">
+                        <select name="text_area" id="text_area" multiple="multiple" size="15">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="control_group">
+                        <span class="item_title">Control group</span>
+
+                        <input type="button" value="Add" id="add_but">
+                        <input type="button" value="Delete" id="del_but">
+                    </div>
+
+                    <div class="sort_group">
+                        <span class="item_title">Sort group</span>
+
+                        <input type="button" value="Sort by Name" id="sort_by_name_but">
+                        <input type="button" value="Sort by Value" id="sort_by_value_but">
+                    </div>
+                    <input type="button" value="Show XML" id="show_xml_but">
                 </div>
             </div>
-
-            <div class="control">
-                <div class="control_group">
-                    <span class="item_title">Control group</span>
-
-                    <input type="button" value="Add" id="add_but">
-                    <input type="button" value="Delete" id="del_but">
-                </div>
-
-                <div class="sort_group">
-                    <span class="item_title">Sort group</span>
-
-                    <input type="button" value="Sort by Name" id="sort_by_name_but">
-                    <input type="button" value="Sort by Value" id="sort_by_value_but">
-                </div>
-                <input type="button" value="Show XML" id="show_xml_but">
-            </div>
-        </div>
-    </main>
-    <footer></footer>
+        </main>
+        <footer></footer>
+    </div>
 </body>
 
 <script type="module" src="js/index.js"></script>

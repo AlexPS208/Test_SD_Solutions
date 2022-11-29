@@ -2,7 +2,7 @@ import {
     validator,
     check_for_identical_name,
     ignore_spaces
-} from './validation.js';
+} from "./validation.js"
 import {
     get_pairs,
     get_key_by_value
@@ -93,7 +93,7 @@ sort_by_value_button.onclick = function () {
     // Create new options in sort order by values
     Object.values(pairs).sort().forEach(function (value) {
         let option = document.createElement("option")
-        option.textContent = get_key_by_value(pairs, value) + '=' + value
+        option.textContent = get_key_by_value(pairs, value) + "=" + value
         delete pairs[get_key_by_value(pairs, value)]
         new_options.push(option)
     })

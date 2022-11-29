@@ -1,11 +1,12 @@
 * {
-    font-size: 16pt;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 /* BACKGROUND SETTING */
 
-body {
+.wrapper {
     background-color: #5c87b2;
 
     display: flex;
@@ -31,7 +32,7 @@ main {
 }
 
 h1 {
-    font-size: 24pt;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
@@ -51,21 +52,21 @@ h1 {
     flex-direction: column;
 }
 
-span.item_title {
-    font-size: 12pt;
+.item_title {
+    font-size: 16px;
     color: #8f8a8a;
     margin-top: 30px;
 }
 
 /* For hide scrollbar in select element */
-.wrapper {
+.hide_scrollbar {
     display: inline-block;
     vertical-align: top;
     overflow: hidden;
     border: solid grey 1px;
 }
 
-.wrapper>select {
+.hide_scrollbar>select {
     width: 500px;
     padding: 10px;
     margin: -5px -20px -5px -5px;

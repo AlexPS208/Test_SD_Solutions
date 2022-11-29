@@ -42,10 +42,15 @@ add_button.onclick = function () {
 
 // Click to Delete button
 delete_button.onclick = function () {
+    // Get array of options in select
     let values = text_area.options
+    // Get index of first selected element
     let selected_value_index = values["selectedIndex"]
+    // While selected element exists
     while (selected_value_index != -1) {
+        // Delete selected element
         text_area.removeChild(values[selected_value_index])
+        // Refresh index of first selected elem
+        selected_value_index = values["selectedIndex"]
     }
-    
 }

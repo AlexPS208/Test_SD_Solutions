@@ -1,8 +1,12 @@
 import {
     validator,
+    check_for_identical_name,
     ignore_spaces
 } from './validation.js';
-
+import {
+    get_pairs,
+    get_key_by_value
+} from "./auxiliary_for_sorting.js"
 
 // Querry elements
 const input = document.getElementById("input")
@@ -15,25 +19,25 @@ const sort_by_value_button = document.getElementById("sort_by_value_but")
 const xml_button = document.getElementById("show_xml_but")
 
 
-
-// Array for text area values
-let text_area_values = []
-
-
 // Click to Add button
 add_button.onclick = function () {
+    let content = input.value
     // If value is correct
-    if (validator(input.value)) {
-        // Add element to text area
-        let opt = document.createElement("option")
-        opt.textContent = ignore_spaces(input.value)
-        text_area.appendChild(opt)
-
-        // Add element to array
-        text_area_values.push(opt)
+    if (validator(content)) {
+        let names = Object.keys(get_pairs(text_area.options))
+        // If name of pair doesn't exist already
+        if (check_for_identical_name(content, names)) {
+            // Add element to text area
+            let opt = document.createElement("option")
+            opt.textContent = ignore_spaces(content)
+            text_area.appendChild(opt)
+        } else {
+            // Exist name
+            alert("This name already exist")
+        }
     } else {
-        // Incorrect value
-        alert("Inappropriate value")
+        // Incorrect pair
+        alert("Inappropriate format of pair")
     }
     // Clear input
     input.value = ""
@@ -43,14 +47,61 @@ add_button.onclick = function () {
 // Click to Delete button
 delete_button.onclick = function () {
     // Get array of options in select
-    let values = text_area.options
+    let options = text_area.options
     // Get index of first selected element
-    let selected_value_index = values["selectedIndex"]
+    let selected_value_index = options["selectedIndex"]
     // While selected element exists
     while (selected_value_index != -1) {
         // Delete selected element
-        text_area.removeChild(values[selected_value_index])
+        text_area.removeChild(options[selected_value_index])
         // Refresh index of first selected elem
-        selected_value_index = values["selectedIndex"]
+        selected_value_index = options["selectedIndex"]
     }
+}
+
+
+// Click to Sort by Name button
+sort_by_name_button.onclick = function () {
+    // Get array of options in select
+    let options = text_area.options
+    let pairs = get_pairs(options)
+    let new_options = []
+
+    // Create new options in sort order by names
+    Object.keys(pairs).sort().forEach(function (key) {
+        let option = document.createElement("option")
+        option.textContent = key + '=' + pairs[key]
+        new_options.push(option)
+    })
+
+    // Remowe old options
+    for (let i = options.length - 1; i >= 0; i--) text_area.removeChild(options[i])
+    // Insert new options
+    new_options.forEach(option => {
+        text_area.appendChild(option)
+    })
+}
+
+
+// Click to Sort by Value button
+sort_by_value_button.onclick = function () {
+    // Get array of options in select
+    let options = text_area.options
+    let pairs = get_pairs(options)
+    let new_options = []
+
+    // Create new options in sort order by values
+    Object.values(pairs).sort().forEach(function (value) {
+        let option = document.createElement("option")
+        option.textContent = get_key_by_value(pairs, value) + '=' + value
+        delete pairs[get_key_by_value(pairs, value)]
+        new_options.push(option)
+    })
+
+    // Remowe old options
+    for (let i = options.length - 1; i >= 0; i--) text_area.removeChild(options[i])
+    // Insert new options
+    new_options.forEach(option => {
+        text_area.appendChild(option)
+    })
 }

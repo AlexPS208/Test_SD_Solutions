@@ -22,9 +22,8 @@ const sort_by_name_button = document.getElementById("sort_by_name_but")
 const sort_by_value_button = document.getElementById("sort_by_value_but")
 const xml_button = document.getElementById("show_xml_but")
 
-
-// Click to Add button
-add_button.onclick = function () {
+// Function for adding pair to text area
+const add_pair = function () {
     let content = input.value
     // If value is correct
     if (validator(content)) {
@@ -47,6 +46,16 @@ add_button.onclick = function () {
     input.value = ""
 }
 
+// Click to Add button
+add_button.addEventListener('click', event => {
+    add_pair()
+})
+// Click Enter in input area
+input.addEventListener('keypress', event => {
+    if (event.key === "Enter") {
+        add_pair()
+    }
+})
 
 // Click to Delete button
 delete_button.onclick = function () {

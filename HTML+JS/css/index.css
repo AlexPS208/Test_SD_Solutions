@@ -1,10 +1,13 @@
 * {
-    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
 /* BACKGROUND SETTING */
+
+html {
+    background-color: #5c87b2;
+}
 
 .wrapper {
     background-color: #5c87b2;
@@ -19,26 +22,17 @@
 main {
     background-color: #ffffff;
     border-radius: 5px;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    padding: 60px 50px;
-
-    min-width: 750px;
-    max-width: 1250px;
-    min-height: 600px;
-    max-height: 1000px;
+    margin: 50px 0;
 }
 
 h1 {
     font-size: 36px;
-    margin-bottom: 20px;
 }
 
 /* CONTENT AREA */
 
 .content {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-content: space-between;
 }
@@ -51,9 +45,7 @@ h1 {
 }
 
 .item_title {
-    font-size: 16px;
     color: #8f8a8a;
-    margin-top: 30px;
 }
 
 /* For hide scrollbar in select element */
@@ -65,18 +57,15 @@ h1 {
 }
 
 .hide_scrollbar>select {
-    width: 500px;
     padding: 10px;
     margin: -5px -20px -5px -5px;
+    border: #ffffff;
 }
 
 /* BUTTON AREA */
 
 .control {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
 }
 
 .control>div {
@@ -84,6 +73,15 @@ h1 {
     flex-direction: column;
 }
 
+.control>.xml {
+    align-content: center;
+    justify-content: center;
+}
+
 .control>div>input {
     margin: 10px 0;
+}
+
+.control>.xml>input {
+    margin: 0;
 }

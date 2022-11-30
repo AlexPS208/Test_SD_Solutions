@@ -1,0 +1,144 @@
+/* MOBILE VERSION */
+@media all and (max-width: 480px) {
+    * {
+        font-size: 14px;
+    }
+
+    main {
+        width: 300px;
+        padding: 60px 5px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .item_title {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .hide_scrollbar>select {
+        width: 300px;
+    }
+
+    .control {
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* WIDTH-MOBILE VERSION */
+@media all and (min-width: 481px) and (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+
+    main {
+        width: 400px;
+        padding: 60px 30px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .item_title {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .hide_scrollbar>select {
+        width: 400px;
+    }
+
+    .control {
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* TABLET VERSION */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    * {
+        font-size: 18px;
+    }
+
+    main {
+        width: 500px;
+        padding: 60px 50px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .item_title {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .hide_scrollbar>select {
+        width: 500px;
+    }
+
+    .control {
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* DESCTOP VERSION */
+@media all and (min-width: 1024px) {
+    * {
+        font-size: 18px;
+    }
+
+    main {
+        width: 700px;
+        padding: 60px 50px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .content {
+        flex-direction: row;
+    }
+
+    .item_title {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .hide_scrollbar>select {
+        width: 500px;
+    }
+
+    .control {
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+    }
+}

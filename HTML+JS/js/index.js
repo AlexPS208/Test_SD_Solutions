@@ -7,6 +7,10 @@ import {
     get_pairs,
     get_key_by_value
 } from "./auxiliary_for_sorting.js"
+import {
+    create_xml,
+    save_to_pc
+} from "./create_xml.js"
 
 // Querry elements
 const input = document.getElementById("input")
@@ -104,4 +108,16 @@ sort_by_value_button.onclick = function () {
     new_options.forEach(option => {
         text_area.appendChild(option)
     })
+}
+
+
+// Click to Sort by Value button
+xml_button.onclick = function () {
+    // Pack pairs object
+    let options = text_area.options
+    let pairs = get_pairs(options)
+    // Create xml text
+    let xml = create_xml(pairs)
+    // Save this to pc
+    save_to_pc(xml)
 }
